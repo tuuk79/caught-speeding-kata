@@ -1,6 +1,3 @@
-// Karma configuration
-// Generated on Thu Mar 08 2018 11:18:17 GMT-0600 (Central Standard Time)
-
 module.exports = function (config) {
   config.set({
 
@@ -12,35 +9,13 @@ module.exports = function (config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
-    coverageIstanbulReporter: {
-      reports: ['html', 'lcovonly'],
-      fixWebpackSourcePaths: true
-    },
-
-    // list of files / patterns to load in the browser
     files: [
-      '*.spec.ts'
+      '*.js'
     ],
-
 
     // list of files / patterns to exclude
     exclude: [
     ],
-
-
-    preprocessors: {
-      '**/*.ts': ['typescript']
-    },
-
-    typescriptPreprocessor: {
-      options: {
-        sourceMap: true, // generate source maps
-        noResolve: false // enforce type resolution
-      },
-      transformPath: function (path) {
-        return path.replace(/\.ts$/, '.js');
-      }
-    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'

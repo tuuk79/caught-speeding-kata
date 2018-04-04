@@ -39,7 +39,7 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result); 
 	});	
 
-	it('should return 1 if speed is between 80 and 85 and it is your birthday', () => {
+	it('should return 1 if speed is between 80 and 85 and is your birthday', () => {
 		const speed = Math.floor(Math.random() * (85 - 80 + 1)) + 80;
 		const isBirthday = true;
 		const expected = 1;
@@ -47,8 +47,16 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result);
 	});
 
-	it('should return 0 if speed is between 60 and 65 and it is your birthday', () => {
+	it('should return 0 if speed is between 60 and 65 and is your birthday', () => {
 		const speed = Math.floor(Math.random() * (65 - 60 + 1)) + 60;
+		const isBirthday = true;
+		const expected = 0;
+		const result = caughtSpeeding(speed, isBirthday);
+		expect(expected).toEqual(result);
+	});
+
+	it('should return 1 if speed is between 61 and 85 and is your birthday', () => {
+		const speed = 68;
 		const isBirthday = true;
 		const expected = 0;
 		const result = caughtSpeeding(speed, isBirthday);

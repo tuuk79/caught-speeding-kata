@@ -2,8 +2,13 @@ function caughtSpeeding(speed, isBirthday) {
 	if (isBirthday && speed == 65) {
 		return 0;
 	}
-	if (!isBirthday && speed == 60) {
+	else if (isBirthday && (speed >= 60 && speed <= 65)) {
 		return 0;
 	}
-	return 1;
+	else if (!isBirthday && speed == 60) {
+		return 0;
+	}
+	else {
+		return 1;
+	}
 }

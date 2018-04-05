@@ -11,10 +11,10 @@ function caughtSpeeding(speed, isBirthday) {
 		}
 	}
 	else {
-		if (speed > 60 && speed < 80) {
+		if (speed > 60 && speed < 81) {
 			return 1;
 		}
-		else if(speed > 79){
+		else if(speed > 80){
 			return 2;
 		}
 		else {

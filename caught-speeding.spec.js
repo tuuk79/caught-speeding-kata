@@ -1,5 +1,5 @@
 describe('caughtSpeeding', () => {
-	it('should return 0 if speed is 60 and is not birthday', () => {
+	it('should return 0 if speed is 60 and it is not birthday', () => {
 		const speed = 60;
 		const isBirthday = false;
 		const expected = 0;
@@ -7,7 +7,7 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result);
 	});
 
-	it('should return 1 if speed is 65 and is not birthday', () => {
+	it('should return 1 if speed is 65 and it is not birthday', () => {
 		const speed = 65;
 		const isBirthday = false;
 		const expected = 1;
@@ -15,7 +15,7 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result);
 	});
 
-	it('should return 0 if speed is 65 and is birthday', () => {
+	it('should return 0 if speed is 65 and it is birthday', () => {
 		const speed = 65;
 		const isBirthday = true;
 		const expected = 0;
@@ -23,7 +23,7 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result);
 	});
 
-	it('should return 1 if speed is over 60 but less than 80 and is not your birthday', () => {         
+	it('should return 1 if speed is over 60 but less than 80 and it is not your birthday', () => {         
 		const speed = Math.floor(Math.random() * (80 - 61 + 1)) + 61;        
 		const isBirthday = false;         
 		const expected = 1;         
@@ -31,15 +31,15 @@ describe('caughtSpeeding', () => {
 		expect(expected).toEqual(result);     
 	});
 
-	it('should return 2 if speed is over 80 and is not your birthday', () => { 		
+	it('should return 2 if speed is over 80 and it is not your birthday', () => { 		
 		const speed = Math.floor(Math.random() * 10 + 80); 		
 		const isBirthday = false; 		
-		const expected = 1; 		
+		const expected = 2; 		
 		const result = caughtSpeeding(speed, isBirthday); 		
 		expect(expected).toEqual(result); 
 	});	
 
-	it('should return 1 if speed is between 80 and 85 and is your birthday', () => {
+	it('should return 1 if speed is between 80 and 85 and it is your birthday', () => {
 		const speed = Math.floor(Math.random() * (85 - 80 + 1)) + 80;
 		const isBirthday = true;
 		const expected = 1;
